@@ -1,0 +1,24 @@
+@use "./variables" as vars
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap')
+
+html 
+    --color-primary: #04AEED
+    --color-primary-dark: #007FBA
+    --color-primary-ligth: #66E0FF
+    --color-white: #FFFFFF
+    --padding-y: 2rem
+    --tablet: 480px
+    font-family: 'Montserrat', sans-serif
+    font-size: 14px
+
+img
+    object-fit: contain
+    object-position: center
+
+@media screen and (min-width: vars.$tablet-breakpoint )
+    html
+        font-size: 16px
+
+@media screen and (min-width: vars.$desktop-breakpoint) and (orientation: landscape)
+    html
+        font-size: 18px
