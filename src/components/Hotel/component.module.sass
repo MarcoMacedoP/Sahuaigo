@@ -1,0 +1,87 @@
+.container
+    display: flex
+    flex-direction: column
+    padding-right: 1rem
+
+
+.section
+     display: flex
+     flex-direction: column
+     justify-content: space-between
+     position: relative
+
+.title
+     composes: Subtitle from "../../styles/texts.sass"
+     margin: 1rem 0 1.5rem
+
+.description
+     margin: 1rem 0 2rem
+
+
+.slider
+    --slide-heigth: 30vh
+    height: var(--slide-heigth) 
+    width: 100%
+
+.slide
+     display: block
+     width: 100%
+     height: var(--slide-heigth) 
+     position: relative
+
+.slide::after
+    content: ""
+    z-index: 1
+    position: absolute
+    background: rgba(0,0,0, 0.40)
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+
+.hotelImage
+    display:block
+    object-fit: cover
+    object-position: center
+    width: 100%
+    height: 100%
+
+.hotelImage::after
+     content: "jaja"
+
+
+.slideControls
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 1rem 
+    display: flex
+    align-items: center
+    justify-content: space-between 
+
+    img
+         object-fit: contain
+
+.arrowBack
+   transform: rotate(180deg)
+
+.slideDots
+    position: absolute 
+    bottom: 1rem 
+    width: 100%
+    height: 30px
+    display: flex
+    justify-content: center
+    align-items: center
+    
+.slideDot
+   width: 8px
+   height: 8px
+   background: #FFFFFF 
+   margin: 0 4px
+   border-radius: 50%
+   opacity: 0.37
+   transition: opacity ease-in 500ms
+
+.slideDotSelected
+    opacity: 1
