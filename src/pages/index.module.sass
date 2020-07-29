@@ -1,3 +1,5 @@
+@use "../styles/variables" as vars
+
 .hotelsContainer
     padding: 0 var(--padding-y) 
     margin: var(--padding-x) 0 2rem 
@@ -6,3 +8,13 @@
     composes: Title from "../styles/texts.sass" 
     color: var(--color-primary-ligth)
     margin-bottom: 2rem
+
+
+
+@media only screen and (min-width: vars.$desktop-breakpoint)
+     .hotelsContainer
+          margin-top: 11rem 
+
+     .subtitle
+         margin-bottom: 4rem
+         text-align: center

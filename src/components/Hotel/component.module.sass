@@ -1,8 +1,12 @@
+@use "../../styles/variables" as vars
+
 .container
     display: flex
     flex-direction: column
     padding-right: 1rem
 
+.containerInverted
+    composes: container
 
 .section
      display: flex
@@ -14,6 +18,10 @@
      composes: Subtitle from "../../styles/texts.sass"
      margin: 1rem 0 1.5rem
 
+.titleDesktop 
+     composes: title
+     display: none
+     
 .description
      margin: 1rem 0 2rem
 
@@ -85,3 +93,33 @@
 
 .slideDotSelected
     opacity: 1
+
+@media only screen and (min-width: vars.$desktop-breakpoint)
+    .container
+        flex-direction: row
+        margin: 6rem 0
+    
+    .containerInverted
+        flex-direction: row-reverse
+
+    .section
+        width: 50%
+        --section-padding: 3rem
+
+    .section:last-child
+        padding: 0 var(--section-padding) 
+        justify-content: center
+        width: 40%
+
+    .containerInverted .section:last-child
+        padding: 0 var(--section-padding) 0 0
+
+    .slider
+        --slide-heigth: 50vh
+
+    .title
+        display: none
+
+    .titleDesktop
+        display: block 
+        margin-bottom: 0
