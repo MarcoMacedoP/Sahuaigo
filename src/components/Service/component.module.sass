@@ -1,11 +1,35 @@
+@use "../../styles/variables" as vars
 .container 
     margin: 1rem 0 3rem
+    display: flex
+    flex-direction: column
 
 .image 
     width: 100%
     object-fit: cover
+
 .description
     margin-bottom: 0.5rem
+
 .title
     margin-bottom: 1rem
     composes: Subtitle from "../../styles/texts.sass"
+
+@media  screen and ( min-width: vars.$desktop-breakpoint )
+    .container
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 4rem
+    .container:last-child
+        flex-direction: row-reverse
+        justify-content: flex-end
+        .information
+            margin-left: 2rem
+
+    .information
+        width: 30%
+
+    .image
+        width: 50%
+    

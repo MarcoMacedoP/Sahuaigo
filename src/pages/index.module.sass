@@ -10,16 +10,32 @@
     margin-bottom: 2rem
 
 .services
+    display: flex
+    flex-direction: column
+    align-items: center
     margin: 4rem var(--padding-x)
     min-height: 100vh
 
+.servicesTitle
+    composes: subtitle
+
 .servicesDescription
     margin-bottom: 2rem
+    font-weight: bold
+    color: var(--color-gray)
+
 
 @media only screen and (min-width: vars.$desktop-breakpoint)
-     .hotelsContainer
-          margin-top: 11rem 
-
      .subtitle
          margin-bottom: 4rem
          text-align: center
+
+     .hotelsContainer
+          margin-top: 11rem 
+
+     .servicesDescription
+         text-align: center
+         width: 50%
+
+     .servicesTitle
+          margin-bottom: 1rem

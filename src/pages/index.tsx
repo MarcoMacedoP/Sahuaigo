@@ -70,7 +70,7 @@ export default function Home() {
         ))}
       </article>
       <article className={styles.services}>
-        <h4 className={styles.subtitle}>Nuestros servicios</h4>
+        <h4 className={styles.servicesTitle}>Nuestros servicios</h4>
         <p className={styles.servicesDescription}>
           Además de ofrecerte los mejores hoteles de Sahuayo tambien
           contamos con los siguientes servicios

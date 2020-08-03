@@ -14,8 +14,10 @@ export const Service: React.FC<ServiceProps> = ({
 }) => {
   return (
     <section className={styles.container}>
-      <p className={styles.title}>{name}</p>
-      <p className={styles.description}>{description}</p>
+      <div className={styles.information}>
+        <p className={styles.title}>{name}</p>
+        <p className={styles.description}>{description}</p>
+      </div>
       <img className={styles.image} src={image} alt="" />
     </section>
   );
