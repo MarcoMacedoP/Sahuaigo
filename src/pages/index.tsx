@@ -6,6 +6,7 @@ import { GetStaticProps } from "next";
 import { Form, Formik } from "formik";
 import { Input } from "../components/Input";
 import { LandingForm } from "../components/LandingForm";
+import { Service } from "../components/Service";
 
 interface HomeProps {}
 
@@ -67,6 +68,23 @@ export default function Home() {
             description={hotel.description}
           />
         ))}
+      </article>
+      <article className={styles.services}>
+        <h4 className={styles.subtitle}>Nuestros servicios</h4>
+        <p className={styles.servicesDescription}>
+          Además de ofrecerte los mejores hoteles de Sahuayo tambien
+          contamos con los siguientes servicios
+        </p>
+        <Service
+          description="Despreocupate en llegar a tu hotel. Nosotros te llevamos con todas las comodidades."
+          name="Transporte aeropuerto-hotel"
+          image="https://images.pexels.com/photos/1588073/pexels-photo-1588073.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+        />
+        <Service
+          description="Te mostramos lo mejor de Sahuayo."
+          name="Recorridos turisticos"
+          image="/assets/img/landing-2.jpg"
+        />
       </article>
       <LandingForm hotels={hotels} />
     </main>
