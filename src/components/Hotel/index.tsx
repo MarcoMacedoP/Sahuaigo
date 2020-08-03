@@ -6,13 +6,13 @@ import {
   Slider,
   Slide,
   ButtonBack,
-  ButtonNext
+  ButtonNext,
 } from "pure-react-carousel";
 
 interface HotelProps {
-  desc: string;
   title: string;
   isInverted?: boolean;
+  description: string;
 }
 
 export const Hotel = (props: HotelProps) => {
@@ -24,7 +24,9 @@ export const Hotel = (props: HotelProps) => {
 
   return (
     <div
-      className={props.isInverted ? styles.containerInverted : styles.container}
+      className={
+        props.isInverted ? styles.containerInverted : styles.container
+      }
     >
       <section className={styles.section}>
         <p className={styles.title}>
@@ -60,8 +62,9 @@ export const Hotel = (props: HotelProps) => {
             <div className={styles.slideDots}>
               {slides.map((slide, index) => (
                 <div
-                  className={`${styles.slideDot} ${index === currentIndex &&
-                    styles.slideDotSelected} `}
+                  className={`${styles.slideDot} ${
+                    index === currentIndex && styles.slideDotSelected
+                  } `}
                 />
               ))}
             </div>

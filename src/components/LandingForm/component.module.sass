@@ -1,0 +1,29 @@
+@use "../../styles/variables" as vars
+
+.container
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+    justify-content: space-between
+    margin: 5rem var(--padding-x) 0 
+    height: 100vh
+    box-sizing: border-box
+    form
+        width: 100%
+        padding-right: 3rem
+        margin-bottom: 3rem
+
+.title
+    composes: Title from "../../styles/texts.sass"
+    
+
+@media screen and ( min-width:  vars.$tablet-breakpoint)
+    .container
+        flex-direction: row
+        align-items: center
+        form
+            width: 40%
+    .title 
+        width: 40%
+    

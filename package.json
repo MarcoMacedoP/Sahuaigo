@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "formik": "^2.1.5",
     "next": "9.4.4",
     "pure-react-carousel": "^1.27.1",
     "react": "16.13.1",
