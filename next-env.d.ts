@@ -3,6 +3,8 @@
 
 declare interface Hotel {
   id: number;
+  stars: number;
+  logo: string;
   name: string;
   images: string[];
   description: string;

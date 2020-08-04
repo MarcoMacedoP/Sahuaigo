@@ -1,26 +1,34 @@
 [
   {
-    "id": 1,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id maximus est. Aliquam arcu nunc, blandit a massa vel, ultricies ultricies dui. Proin in accumsan orci. Aliquam posuere mauris a tristique viverra. Cras sodales risus diam, non commodo purus rutrum sed. Mauris",
-    "images": [],
-    "name": "Nombre del hotel"
-  },
-  {
-    "id": 2,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id maximus est. Aliquam arcu nunc, blandit a massa vel, ultricies ultricies dui. Proin in accumsan orci. Aliquam posuere mauris a tristique viverra. Cras sodales risus diam, non commodo purus rutrum sed. Mauris",
-    "images": [],
-    "name": "Nombre del hotel"
-  },
-  {
     "id": 3,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id maximus est. Aliquam arcu nunc, blandit a massa vel, ultricies ultricies dui. Proin in accumsan orci. Aliquam posuere mauris a tristique viverra. Cras sodales risus diam, non commodo purus rutrum sed. Mauris",
+    "logo": "",
+    "stars": 2,
+    "description": "Hotel que te hará sentir como en casa, a solo 2 minutos del Templo del Sagrado Corazón y 10 minutos del centro de la ciudad. Cuenta con internet, agua caliente, tv y cuartos familiares.",
     "images": [],
-    "name": "Nombre del hotel"
+    "name": "HOTEL MESON POSADA."
+  },
+  {
+    "id": 1,
+    "stars": 3,
+    "logo": "",
+    "description": "Hotel ejecutivo ubicado en el Boulevard Lázaro Cárdenas, a solo 12 minutos de centro de la ciudad. Cuenta con lobby-bar, estacionamiento, internet, agua caliente y tv.",
+    "images": [],
+    "name": "HOTEL EJECUTIVO EXPRESS INN"
+  },
+  {
+    "stars": 2,
+    "id": 2,
+    "logo": "",
+    "description": "Hotel ubicado en el Boulevard Lázaro Cárdenas, a solo 12 minutos de centro de la ciudad. Cuenta con Lobby-bar, estacionamiento, internet, agua caliente, tv.",
+    "images": [],
+    "name": "Hotel Lait"
   },
   {
     "id": 4,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id maximus est. Aliquam arcu nunc, blandit a massa vel, ultricies ultricies dui. Proin in accumsan orci. Aliquam posuere mauris a tristique viverra. Cras sodales risus diam, non commodo purus rutrum sed. Mauris",
-    "images": [],
-    "name": "Nombre del hotel"
+    "name": "Hotel plaza",
+    "logo": "",
+    "stars": 3,
+    "description": "Hotel con la mejor vista de la ciudad, frente a la plaza principal. Cuenta con restaurant, estacionamiento, internet, agua caliente, tv y suites con aire acondicionado.",
+    "images": []
   }
 ]
