@@ -1,0 +1,16 @@
+{
+  "title": "Nuestros servicios",
+  "content": "Además de ofrecerte los mejores hoteles de Sahuayo tambien contamos con los siguientes servicios",
+  "data": [
+    {
+      "title": "Tranporte hotel-aeropuerto",
+      "content": "Hemos implementado un servicio adicional de transporte terrestre para que puedas desplazarte a tu hotel desde la central camionera de Sahuayo o desde el Aeropuerto Internacional de Guadalajara, con choferes certificados por nuestra empresa y ofreciéndote así un servicio de alta calidad para que no se dificulte tu arribo a la ciudad de Sahuayo.",
+      "imageUrl": ""
+    },
+    {
+      "title": "Recorridos turísticos",
+      "content": "Sabemos la importancia de conocer nuestra ciudad rica en historia y tradiciones de las cuales los sahuayense nos sentimos orgullosos de transmitir a los visitantes, por lo que contamos con recorridos turísticos históricos-culturales y gastronómicos-industriales, para que nuestros visitantes conozcan la historia de Sahuayo, sus monumentos históricos así como también la historia de su gente. ",
+      "imageUrl": ""
+    }
+  ]
+}

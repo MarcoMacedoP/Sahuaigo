@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id maximus est. Aliquam arcu nunc, blandit a massa vel, ultricies ultricies dui. Proin in accumsan orci. Aliquam posuere mauris a tristique viverra. Cras sodales risus diam, non commodo purus rutrum sed. Mauris",
+    "images": [],
+    "name": "Nombre del hotel"
+  },
+  {
+    "id": 2,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id maximus est. Aliquam arcu nunc, blandit a massa vel, ultricies ultricies dui. Proin in accumsan orci. Aliquam posuere mauris a tristique viverra. Cras sodales risus diam, non commodo purus rutrum sed. Mauris",
+    "images": [],
+    "name": "Nombre del hotel"
+  },
+  {
+    "id": 3,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id maximus est. Aliquam arcu nunc, blandit a massa vel, ultricies ultricies dui. Proin in accumsan orci. Aliquam posuere mauris a tristique viverra. Cras sodales risus diam, non commodo purus rutrum sed. Mauris",
+    "images": [],
+    "name": "Nombre del hotel"
+  },
+  {
+    "id": 4,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id maximus est. Aliquam arcu nunc, blandit a massa vel, ultricies ultricies dui. Proin in accumsan orci. Aliquam posuere mauris a tristique viverra. Cras sodales risus diam, non commodo purus rutrum sed. Mauris",
+    "images": [],
+    "name": "Nombre del hotel"
+  }
+]
