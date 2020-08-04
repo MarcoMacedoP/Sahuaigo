@@ -9,3 +9,10 @@ declare interface Hotel {
   images: string[];
   description: string;
 }
+
+declare interface EmailData {
+  email: string;
+  name: string;
+  message: string;
+  phone: string;
+}

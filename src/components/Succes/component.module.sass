@@ -1,0 +1,29 @@
+.container
+    background: #4BB543
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 5% 3%
+    max-width: 100%
+    box-sizing: border-box
+    margin-left: 64px
+    border-radius: 32px
+    animation-name: init
+    animation-duration: 500ms
+    animation-delay: 1s
+
+.message
+    composes: Title from "../../styles/texts.sass"
+    color: var(--color-white)
+    width: 50%
+    font-size: 2em
+
+@keyframes init
+    0%
+        border-radius: 200px
+        transform: scale(0)
+        
+    100%
+        border-radius: 32px
+        transform: scale(1)
+        
