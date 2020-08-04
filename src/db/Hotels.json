@@ -1,16 +1,29 @@
 [
   {
+    "name": "HOTEL MESON POSADA.",
+    "logo": "/assets/img/hotels/hotel-meson-logo.png",
     "id": 3,
-    "logo": "",
     "stars": 2,
     "description": "Hotel que te hará sentir como en casa, a solo 2 minutos del Templo del Sagrado Corazón y 10 minutos del centro de la ciudad. Cuenta con internet, agua caliente, tv y cuartos familiares.",
-    "images": [],
-    "name": "HOTEL MESON POSADA."
+    "images": [
+      "/assets/img/hotels/hotel-meson-1.jpg",
+      "/assets/img/hotels/hotel-meson-2.jpg",
+      "/assets/img/hotels/hotel-meson-3.jpg",
+      "/assets/img/hotels/hotel-meson-4.jpg",
+      "/assets/img/hotels/hotel-meson-5.jpg",
+      "/assets/img/hotels/hotel-meson-6.jpg",
+      "/assets/img/hotels/hotel-meson-7.jpg",
+      "/assets/img/hotels/hotel-meson-8.jpg",
+      "/assets/img/hotels/hotel-meson-9.jpg",
+      "/assets/img/hotels/hotel-meson-10.jpg",
+      "/assets/img/hotels/hotel-meson-11.jpg",
+      "/assets/img/hotels/hotel-meson-12.jpg"
+    ]
   },
   {
     "id": 1,
-    "stars": 3,
     "logo": "",
+    "stars": 3,
     "description": "Hotel ejecutivo ubicado en el Boulevard Lázaro Cárdenas, a solo 12 minutos de centro de la ciudad. Cuenta con lobby-bar, estacionamiento, internet, agua caliente y tv.",
     "images": [],
     "name": "HOTEL EJECUTIVO EXPRESS INN"

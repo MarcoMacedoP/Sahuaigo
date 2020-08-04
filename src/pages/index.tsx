@@ -28,6 +28,7 @@ export default function Home({
   information,
   services,
 }: HomeProps) {
+  console.log(hotels);
   return (
     <main>
       {information.map((element, index) => (
@@ -48,8 +49,7 @@ export default function Home({
           <Hotel
             key={hotel.id}
             isInverted={index % 2 !== 0}
-            title={hotel.name}
-            description={hotel.description}
+            {...hotel}
           />
         ))}
       </article>

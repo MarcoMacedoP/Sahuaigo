@@ -14,6 +14,26 @@
      justify-content: space-between
      position: relative
 
+.titleContainer
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    --logo-size: 50px
+    
+.logo
+    width: var(--logo-size) 
+    height: 100%
+    object-fit: contain
+    margin-left: 8px
+    object-position: center
+
+
+.emoji
+    margin-top: 8px
+    font-size: 1.2rem
+    display: inline
+    margin-right: 0.3rem
+
 .title
      composes: Subtitle from "../../styles/texts.sass"
      margin: 1rem 0 1.5rem
@@ -121,5 +141,6 @@
         display: none
 
     .titleDesktop
-        display: block 
+        display: block
+        width: 60%
         margin-bottom: 0
