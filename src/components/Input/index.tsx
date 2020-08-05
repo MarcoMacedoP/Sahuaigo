@@ -27,7 +27,12 @@ export const Input: React.FC<InputProps> = ({
         type={type}
         placeholder={placeholder}
       />
-      <ErrorMessage name={name} />
+      <ErrorMessage
+        name={name}
+        render={(error) => (
+          <div className={styles.errorMessage}>{error}</div>
+        )}
+      />
     </div>
   );
 };

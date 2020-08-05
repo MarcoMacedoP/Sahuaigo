@@ -22,3 +22,19 @@
 .field:focus
     outline: none
     border: 2px solid var(--color-primary-dark)
+
+.errorMessage
+    margin-top: 8px
+    padding: 8px
+    color: var(--color-white)
+    background-color: var(--color-error)
+    border-radius: 8px
+    animation: error 300ms
+
+@keyframes error
+    0%
+      width: 0
+
+    100%
+        width: 100%
+        

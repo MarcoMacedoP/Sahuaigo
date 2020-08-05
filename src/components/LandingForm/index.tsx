@@ -6,6 +6,29 @@ import styles from "./component.module.sass";
 import { Button } from "../Button";
 import { Loader } from "../Loader";
 import { Success } from "../Succes";
+import * as yup from "yup";
+
+yup.setLocale({
+  mixed: {
+    required: "El campo es requerido",
+  },
+  string: {
+    email: "Email invalido",
+  },
+});
+
+const validationSchema: yup.ObjectSchema<EmailData> = yup
+  .object()
+  .shape({
+    email: yup.string().email().required(),
+    message: yup.string().notRequired(),
+    name: yup.string().required(),
+    phone: yup
+      .string()
+      .matches(/[1-9]{8,}/, "Número invalido")
+      .required(),
+    selectedHotelId: yup.number().required(),
+  });
 
 type LandingFormProps = {
   hotels: Hotel[];
@@ -35,28 +58,27 @@ export const LandingForm: React.FC<LandingFormProps> = ({
   };
 
   async function onSubmit(values: EmailData) {
-    console.log(values);
-    // setStatus({
-    //   state: "loading",
-    //   error: null,
-    // });
-    // try {
-    //   const data = await fetch("/api/email", {
-    //     method: "post",
-    //     body: JSON.stringify(values),
-    //   }).then((response) => response.json());
-    //   console.log(data);
-    //   setStatus({
-    //     state: "success",
-    //     error: null,
-    //   });
-    // } catch (error) {
-    //   console.log({ error });
-    //   setStatus({
-    //     state: "error",
-    //     error,
-    //   });
-    // }
+    setStatus({
+      state: "loading",
+      error: null,
+    });
+    try {
+      const data = await fetch("/api/email", {
+        method: "post",
+        body: JSON.stringify(values),
+      }).then((response) => response.json());
+      console.log(data);
+      setStatus({
+        state: "success",
+        error: null,
+      });
+    } catch (error) {
+      console.log({ error });
+      setStatus({
+        state: "error",
+        error,
+      });
+    }
   }
   return (
     <section className={styles.container} id="form">
@@ -66,9 +88,16 @@ export const LandingForm: React.FC<LandingFormProps> = ({
       {status.state === "loading" ? (
         <Loader />
       ) : status.state === "success" ? (
-        <Success message="Gracias por reservar con nosotros. Enseguida nos pondremos en contacto para confirmar tu reservación." />
+        <Success
+          title="Gracias por reservar con nosotros."
+          message="Enseguida nos pondremos en contacto para confirmar tu reservación."
+        />
       ) : (
-        <Formik initialValues={initialValues} onSubmit={onSubmit}>
+        <Formik
+          initialValues={initialValues}
+          onSubmit={onSubmit}
+          validationSchema={validationSchema}
+        >
           {({
             handleSubmit,
             values,
