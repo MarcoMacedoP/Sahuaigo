@@ -30,7 +30,7 @@ export default function Home({
   information,
   services,
 }: HomeProps) {
-  const [selectedHotelId, setSelectedHotelId] = useState(1);
+  const [selectedHotelId, setSelectedHotelId] = useState("1");
 
   return (
     <Layout>

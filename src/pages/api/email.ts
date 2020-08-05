@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
+import hotels from "../../db/Hotels.json";
 
 const email = {
   user: "marcosiegman01@gmail.com",
@@ -33,14 +34,18 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
     try {
       const params: EmailData = JSON.parse(req.body);
+      const hotelSelected = hotels.find(
+        (hotel) => String(hotel.id) === params.selectedHotelId
+      );
       const emialHasSended = await sendEmail(
         "Mensaje de contacto desde www.Sahuaygo.com.mx",
-        `
-            Hola, me puse en contacto desde la pagina web.
+        `   Alguien se ha puesto en contacto desde la página web para realizar una reservación.
+          
             Nombre: ${params.name}
             Email: ${params.email}
             Phone: ${params.phone}
             Mensaje: ${params.message}
+            Hotel seleccionado: ${hotelSelected.name}
         `
       );
 

@@ -27,12 +27,12 @@ const validationSchema: yup.ObjectSchema<EmailData> = yup
       .string()
       .matches(/[1-9]{8,}/, "Número invalido")
       .required(),
-    selectedHotelId: yup.number().required(),
+    selectedHotelId: yup.string().required(),
   });
 
 type LandingFormProps = {
   hotels: Hotel[];
-  selectedHotelId?: number;
+  selectedHotelId?: string;
 };
 
 type Status = {

@@ -12,7 +12,7 @@ import {
 interface HotelProps extends Hotel {
   isInverted?: boolean;
   description: string;
-  onSelect: (id: number) => void;
+  onSelect: (id: string) => void;
 }
 
 export const Hotel = ({

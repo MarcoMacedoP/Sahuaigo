@@ -2,7 +2,7 @@
   {
     "name": "HOTEL MESON POSADA.",
     "logo": "/assets/img/hotels/hotel-meson-logo.png",
-    "id": 3,
+    "id": "3",
     "stars": 2,
     "description": "Hotel que te hará sentir como en casa, a solo 2 minutos del Templo del Sagrado Corazón y 10 minutos del centro de la ciudad. Cuenta con internet, agua caliente, tv y cuartos familiares.",
     "images": [
@@ -21,7 +21,7 @@
     ]
   },
   {
-    "id": 1,
+    "id": "1",
     "logo": "",
     "stars": 3,
     "description": "Hotel ejecutivo ubicado en el Boulevard Lázaro Cárdenas, a solo 12 minutos de centro de la ciudad. Cuenta con lobby-bar, estacionamiento, internet, agua caliente y tv.",
@@ -30,14 +30,14 @@
   },
   {
     "stars": 2,
-    "id": 2,
+    "id": "2",
     "logo": "",
     "description": "Hotel ubicado en el Boulevard Lázaro Cárdenas, a solo 12 minutos de centro de la ciudad. Cuenta con Lobby-bar, estacionamiento, internet, agua caliente, tv.",
     "images": [],
     "name": "Hotel Lait"
   },
   {
-    "id": 4,
+    "id": "4",
     "name": "Hotel plaza",
     "logo": "",
     "stars": 3,

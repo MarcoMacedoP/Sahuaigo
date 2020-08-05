@@ -2,7 +2,7 @@
 /// <reference types="next/types/global" />
 
 declare interface Hotel {
-  id: number;
+  id: string;
   stars: number;
   logo: string;
   name: string;
@@ -11,7 +11,7 @@ declare interface Hotel {
 }
 
 declare interface EmailData {
-  selectedHotelId: number;
+  selectedHotelId: string;
   email: string;
   name: string;
   message: string;
