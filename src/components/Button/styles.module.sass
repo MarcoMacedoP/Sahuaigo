@@ -8,3 +8,10 @@
     display: flex
     justify-content: center
     align-items: center
+    transition: background-color 200ms linear
+    transition-property: background-color, transform
+
+.button:hover, .button:focus
+    outline: none
+    background-color: var(--color-primary)
+    transform: scale(1.1)
