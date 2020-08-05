@@ -7,6 +7,7 @@ import { Form, Formik } from "formik";
 import { Input } from "../components/Input";
 import { LandingForm } from "../components/LandingForm";
 import { Service } from "../components/Service";
+import { Layout } from "../components/Layout";
 
 interface Information {
   title: string;
@@ -30,7 +31,7 @@ export default function Home({
 }: HomeProps) {
   console.log(hotels);
   return (
-    <main>
+    <Layout>
       {information.map((element, index) => (
         <ContentWithImage
           key={index}
@@ -69,7 +70,7 @@ export default function Home({
         ))}
       </article>
       <LandingForm hotels={hotels} />
-    </main>
+    </Layout>
   );
 }
 

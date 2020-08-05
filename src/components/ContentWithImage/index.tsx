@@ -10,8 +10,6 @@ type ContentWithImageProps = {
   imageUrl: string;
   /** The text content */
   content: string;
-  /** Defines if the row will be inverted in mobiles and tablets */
-  isInverted?: boolean;
 };
 
 export const ContentWithImage: React.FC<ContentWithImageProps> = ({
@@ -19,14 +17,9 @@ export const ContentWithImage: React.FC<ContentWithImageProps> = ({
   title,
   imageUrl,
   content,
-  isInverted,
 }) => {
   return (
-    <article
-      className={`${styles.container} ${
-        isInverted ? styles.containerInverted : ""
-      }`}
-    >
+    <article className={styles.container}>
       <section className={styles.contentContainer}>
         {isPageInitial ? (
           <h1 className={styles.title}>{title}</h1>

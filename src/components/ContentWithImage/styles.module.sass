@@ -39,38 +39,16 @@
 @media screen and ( min-width: vars.$tablet-breakpoint )
     .container
         flex-direction: row
-        padding-right: 0
-        margin-bottom: 4rem
-        &::after
-            display: none
+        justify-content: flex-start
+        padding: 0
             
     .contentContainer
-            padding-right: 2rem
-    .title, .content
-       color: black
-
+            width: 50%
+            padding: 0 0 0 var(--padding-x)
     .title 
         margin-bottom: 2rem
 
     .content
             margin-bottom: 3rem
 
-    .image
-            position: static
-            width: 50%
 
-    .containerInverted
-        flex-direction: row-reverse
-        padding-left: 0
-
-        .contentContainer
-            padding: 0 var(--padding-y)
-    
-
-   
-@media  screen and ( min-width: vars.$desktop-breakpoint  )
-    .contentContainer 
-        padding-right: 6rem
-    .buttonContainer
-        width: 60%
-    
