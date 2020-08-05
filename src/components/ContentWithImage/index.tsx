@@ -28,7 +28,7 @@ export const ContentWithImage: React.FC<ContentWithImageProps> = ({
         )}
         <p className={styles.content}>{content}</p>
         <div className={styles.buttonContainer}>
-          <Button text="Reserva con nosotros" />
+          <Button text="Reserva con nosotros" url="#hotels" />
         </div>
       </section>
       <img className={styles.image} src={imageUrl} alt="" />

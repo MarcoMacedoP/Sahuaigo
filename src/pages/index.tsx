@@ -8,6 +8,7 @@ import { Input } from "../components/Input";
 import { LandingForm } from "../components/LandingForm";
 import { Service } from "../components/Service";
 import { Layout } from "../components/Layout";
+import { useState } from "react";
 
 interface Information {
   title: string;
@@ -29,7 +30,8 @@ export default function Home({
   information,
   services,
 }: HomeProps) {
-  console.log(hotels);
+  const [selectedHotelId, setSelectedHotelId] = useState(1);
+
   return (
     <Layout>
       {information.map((element, index) => (
@@ -42,12 +44,13 @@ export default function Home({
         />
       ))}
 
-      <article className={styles.hotelsContainer}>
+      <article className={styles.hotelsContainer} id="hotels">
         <h3 className={styles.subtitle}>
           Conoce nuestros mejores hoteles
         </h3>
         {hotels.map((hotel, index) => (
           <Hotel
+            onSelect={setSelectedHotelId}
             key={hotel.id}
             isInverted={index % 2 !== 0}
             {...hotel}
@@ -56,7 +59,7 @@ export default function Home({
       </article>
 
       <article className={styles.services}>
-        <h4 className={styles.servicesTitle}>{services.title} </h4>
+        <h4 className={styles.servicesTitle}>{services.title}</h4>
         <p className={styles.servicesDescription}>
           {services.content}
         </p>
@@ -69,7 +72,10 @@ export default function Home({
           />
         ))}
       </article>
-      <LandingForm hotels={hotels} />
+      <LandingForm
+        hotels={hotels}
+        selectedHotelId={selectedHotelId}
+      />
     </Layout>
   );
 }

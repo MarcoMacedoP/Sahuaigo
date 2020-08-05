@@ -11,6 +11,7 @@ declare interface Hotel {
 }
 
 declare interface EmailData {
+  selectedHotelId: number;
   email: string;
   name: string;
   message: string;

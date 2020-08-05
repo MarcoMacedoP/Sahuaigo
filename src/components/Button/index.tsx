@@ -10,7 +10,11 @@ type ButtonProps = {
   text: string;
 };
 
-export const Button: React.FC<ButtonProps> = ({ url = "#", text, onClick }) => {
+export const Button: React.FC<ButtonProps> = ({
+  url,
+  text,
+  onClick,
+}) => {
   return (
     <a href={url} className={styles.button} onClick={onClick}>
       {text}

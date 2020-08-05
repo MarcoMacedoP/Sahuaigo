@@ -12,6 +12,7 @@ import {
 interface HotelProps extends Hotel {
   isInverted?: boolean;
   description: string;
+  onSelect: (id: number) => void;
 }
 
 export const Hotel = ({
@@ -19,7 +20,9 @@ export const Hotel = ({
   description,
   images = [],
   logo,
+  id,
   stars: baseStars,
+  onSelect,
   isInverted,
 }: HotelProps) => {
   const [currentIndex, setCurrentIndex] = React.useState(0);
@@ -104,7 +107,11 @@ export const Hotel = ({
           />
         </div>
         <p className={styles.description}>{description}</p>
-        <Button text="Reserva en este hotel" />
+        <Button
+          text="Reserva en este hotel"
+          onClick={() => onSelect(id)}
+          url="#form"
+        />
       </section>
     </div>
   );
