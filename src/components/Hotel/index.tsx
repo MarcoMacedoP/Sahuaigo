@@ -37,11 +37,12 @@ export const Hotel = ({
       }
     >
       <section className={styles.section}>
-        <div className={styles.titleContainer}>
-          <p className={styles.title}>
-            <strong> {name} </strong>
-          </p>
-        </div>
+        <HotelTitle
+          logo={logo}
+          name={name}
+          stars={stars}
+          className={styles.titleContainerMobile}
+        />
         <CarouselProvider
           naturalSlideWidth={100}
           naturalSlideHeight={100}
@@ -51,13 +52,7 @@ export const Hotel = ({
             {images.map((slide, index) => (
               <Slide index={index} key={slide}>
                 <div className={styles.slide}>
-                  <img
-                    className={styles.hotelImage}
-                    src={
-                      slide ||
-                      "https://pix10.agoda.net/hotelImages/124/1246280/1246280_16061017110043391702.jpg?s=1024x768"
-                    }
-                  />
+                  <img className={styles.hotelImage} src={slide} />
                 </div>
               </Slide>
             ))}
@@ -85,27 +80,12 @@ export const Hotel = ({
         </CarouselProvider>
       </section>
       <section className={styles.section}>
-        <div className={styles.titleContainer}>
-          <div className={styles.titleDesktop}>
-            <p> {name} </p>
-            <div className={styles.emojiContainer}>
-              {stars.map(() => (
-                <span
-                  className={styles.emoji}
-                  role="img"
-                  aria-label="sheep"
-                >
-                  ⭐
-                </span>
-              ))}
-            </div>
-          </div>
-          <img
-            className={styles.logo}
-            src={logo}
-            alt={`Logo del hotel ${name} en Sahuayo, Michoacan, México.`}
-          />
-        </div>
+        <HotelTitle
+          stars={stars}
+          name={name}
+          logo={logo}
+          className={styles.titleContainerDesktop}
+        />
         <p className={styles.description}>{description}</p>
         <Button
           text="Reserva en este hotel"
@@ -113,6 +93,44 @@ export const Hotel = ({
           url="#form"
         />
       </section>
+    </div>
+  );
+};
+
+type HotelTitleProps = {
+  stars: number[];
+  name: string;
+  logo: string;
+  className: string;
+};
+
+const HotelTitle = ({
+  stars,
+  name,
+  logo,
+  className,
+}: HotelTitleProps) => {
+  return (
+    <div className={className}>
+      <div className={styles.title}>
+        <p> {name} </p>
+        <div className={styles.emojiContainer}>
+          {stars.map(() => (
+            <span
+              className={styles.emoji}
+              role="img"
+              aria-label="star"
+            >
+              ⭐
+            </span>
+          ))}
+        </div>
+      </div>
+      <img
+        className={styles.logo}
+        src={logo}
+        alt={`Logo del hotel ${name} en Sahuayo, Michoacan, México.`}
+      />
     </div>
   );
 };

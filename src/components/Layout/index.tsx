@@ -24,15 +24,25 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
           backgroundColor: `${navbarColor}`,
         }}
       >
-        <a href="/">
+        <a href="/" className={styles.logoContainer}>
           <img
             className={styles.logo}
-            src="/assets/img/brand-logo.png"
+            src="/assets/icons/brand-logo.png"
             alt="Sahuaygo logo de empresa turistica en Sahuayo, Michoacan, México."
           />
         </a>
       </nav>
       {children}
+      <footer className={styles.footer}>
+        Site designed and developed with
+        <span role="img" aria-label="heart">
+          ❤️
+        </span>
+        by{" "}
+        <a href="http://wwww.marcomacedo.com" rel="_blank">
+          Marco Macedo.
+        </a>
+      </footer>
     </>
   );
 };
