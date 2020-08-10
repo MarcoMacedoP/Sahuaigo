@@ -1,8 +1,128 @@
 [
   {
+    "id": "1",
+    "name": "HOTEL EJECUTIVO EXPRESS INN",
+    "logo": "/assets/img/hotels/hotel-express-logo.png",
+    "stars": 3,
+    "description": "Hotel ejecutivo ubicado en el Boulevard Lázaro Cárdenas, a solo 12 minutos de centro de la ciudad. Cuenta con lobby-bar, estacionamiento, internet, agua caliente y tv.",
+    "images": [
+      "/assets/img/hotels/hotel-express-1.jpg",
+      "/assets/img/hotels/hotel-express-2.jpg",
+      "/assets/img/hotels/hotel-express-3.jpg",
+      "/assets/img/hotels/hotel-express-4.jpg",
+      "/assets/img/hotels/hotel-express-5.jpg",
+      "/assets/img/hotels/hotel-express-6.jpg",
+      "/assets/img/hotels/hotel-express-7.jpg",
+      "/assets/img/hotels/hotel-express-8.jpg",
+      "/assets/img/hotels/hotel-express-9.jpg",
+      "/assets/img/hotels/hotel-express-10.jpg",
+      "/assets/img/hotels/hotel-express-11.jpg"
+    ]
+  },
+  {
+    "id": "2",
+    "stars": 2,
+    "name": "Hotel Lait",
+    "logo": "/assets/img/hotels/hotel-lait-logo.png",
+    "description": "Hotel ubicado en el Boulevard Lázaro Cárdenas, a solo 12 minutos de centro de la ciudad. Cuenta con Lobby-bar, estacionamiento, internet, agua caliente, tv.",
+    "images": [
+      "/assets/img/hotels/hotel-lait-1.jpg",
+      "/assets/img/hotels/hotel-lait-2.jpg",
+      "/assets/img/hotels/hotel-lait-3.jpg",
+      "/assets/img/hotels/hotel-lait-4.jpg",
+      "/assets/img/hotels/hotel-lait-5.jpg",
+      "/assets/img/hotels/hotel-lait-6.jpg",
+      "/assets/img/hotels/hotel-lait-7.jpg",
+      "/assets/img/hotels/hotel-lait-8.jpg"
+    ]
+  },
+  {
+    "id": "3",
+    "stars": 3,
+    "name": "Hotel Plaza de Sahuayo",
+    "logo": "/assets/img/hotels/hotel-plaza-logo.jpeg",
+    "description": "Hotel con la mejor vista de la ciudad, frente a la plaza principal Restaurant. Cuenta con estacionamiento, internet, agua caliente, tv y suites con aire acondicionado.",
+    "images": [
+      "/assets/img/hotels/hotel-plaza-1.jpg",
+      "/assets/img/hotels/hotel-plaza-2.jpg",
+      "/assets/img/hotels/hotel-plaza-3.jpg",
+      "/assets/img/hotels/hotel-plaza-4.jpg",
+      "/assets/img/hotels/hotel-plaza-5.jpg",
+      "/assets/img/hotels/hotel-plaza-6.jpg",
+      "/assets/img/hotels/hotel-plaza-7.jpg",
+      "/assets/img/hotels/hotel-plaza-8.jpg",
+      "/assets/img/hotels/hotel-plaza-9.jpg",
+      "/assets/img/hotels/hotel-plaza-10.jpg",
+      "/assets/img/hotels/hotel-plaza-11.jpg",
+      "/assets/img/hotels/hotel-plaza-12.jpg",
+      "/assets/img/hotels/hotel-plaza-13.jpg",
+      "/assets/img/hotels/hotel-plaza-14.jpg",
+      "/assets/img/hotels/hotel-plaza-15.jpg"
+    ]
+  },
+  {
+    "id": "4",
+    "stars": 2,
+    "name": "Hotel Imperial",
+    "logo": "/assets/img/hotels/hotel-imperial-logo.jpg",
+    "description": "Hotel que te hará sentir como en casa, a solo dos minutos del centro histórico. Cuenta con internet, agua caliente y tv.",
+    "images": [
+      "/assets/img/hotels/hotel-imperial-1.jpg",
+      "/assets/img/hotels/hotel-imperial-2.jpg",
+      "/assets/img/hotels/hotel-imperial-3.jpg",
+      "/assets/img/hotels/hotel-imperial-4.jpg",
+      "/assets/img/hotels/hotel-imperial-5.jpg",
+      "/assets/img/hotels/hotel-imperial-6.jpg",
+      "/assets/img/hotels/hotel-imperial-7.jpg",
+      "/assets/img/hotels/hotel-imperial-8.jpg",
+      "/assets/img/hotels/hotel-imperial-9.jpg",
+      "/assets/img/hotels/hotel-imperial-10.jpg"
+    ]
+  },
+  {
+    "id": "5",
+    "stars": 2,
+    "name": "Hotel Casahi",
+    "logo": "/assets/img/hotels/hotel-casahi-logo.png",
+    "description": "Hotel a pie de carretera, a solo 15 minutos del centro histórico. Cuenta con internet, estacionamiento, agua caliente y tv.",
+    "images": [
+      "/assets/img/hotels/hotel-casahi-1.jpg",
+      "/assets/img/hotels/hotel-casahi-2.jpg",
+      "/assets/img/hotels/hotel-casahi-3.jpg",
+      "/assets/img/hotels/hotel-casahi-4.jpg",
+      "/assets/img/hotels/hotel-casahi-5.jpg",
+      "/assets/img/hotels/hotel-casahi-6.jpg",
+      "/assets/img/hotels/hotel-casahi-7.jpg",
+      "/assets/img/hotels/hotel-casahi-8.jpg"
+    ]
+  },
+  {
+    "id": "6",
+    "stars": 4,
+    "name": "Hotel Latino",
+    "logo": "/assets/img/hotels/hotel-latino-logo.png",
+    "description": "Hotel de cuatro estrellas, a solo 5 minutos del centro de la ciudad, situado en la calle principal de la ciudad. Cuenta con internet, estacionamiento, agua caliente, tv, gimnasio, suites y aire acondicionado",
+    "images": [
+      "/assets/img/hotels/hotel-latino-1.jpg",
+      "/assets/img/hotels/hotel-latino-2.jpg",
+      "/assets/img/hotels/hotel-latino-3.jpg",
+      "/assets/img/hotels/hotel-latino-4.jpg",
+      "/assets/img/hotels/hotel-latino-5.jpg",
+      "/assets/img/hotels/hotel-latino-6.jpg",
+      "/assets/img/hotels/hotel-latino-7.jpg",
+      "/assets/img/hotels/hotel-latino-8.jpg",
+      "/assets/img/hotels/hotel-latino-9.jpg",
+      "/assets/img/hotels/hotel-latino-10.jpg",
+      "/assets/img/hotels/hotel-latino-11.jpg",
+      "/assets/img/hotels/hotel-latino-12.jpg",
+      "/assets/img/hotels/hotel-latino-13.jpg",
+      "/assets/img/hotels/hotel-latino-14.jpg"
+    ]
+  },
+  {
+    "id": "7",
     "name": "HOTEL MESON POSADA.",
     "logo": "/assets/img/hotels/hotel-meson-logo.jpg",
-    "id": "1",
     "stars": 2,
     "description": "Hotel que te hará sentir como en casa, a solo 2 minutos del Templo del Sagrado Corazón y 10 minutos del centro de la ciudad. Cuenta con internet, agua caliente, tv y cuartos familiares.",
     "images": [
@@ -24,7 +144,7 @@
   {
     "name": "Hotel Grand",
     "logo": "/assets/img/hotels/hotel-grand-logo.png",
-    "id": "5",
+    "id": "8",
     "stars": 3,
     "description": " Hotel boutique ubicado en frente de la plaza principal. Cuenta con habitaciones estilo contemporáneo, internet, agua caliente, tv y suites amplias.",
     "images": [

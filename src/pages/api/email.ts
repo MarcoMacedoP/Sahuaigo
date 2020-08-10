@@ -6,15 +6,24 @@ const email = {
   user: "marcosiegman01@gmail.com",
   pass: "galleta001",
 };
-const sendEmail = (subject: string, text: string) => {
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: email,
+
+const sendEmail = async (subject: string, text: string) => {
+  let testAccount = await nodemailer.createTestAccount();
+
+  // create reusable transporter object using the default SMTP transport
+  let transporter = nodemailer.createTransport({
+    host: "smtp.ethereal.email",
+    port: 587,
+    secure: false, // true for 465, false for other ports
+    auth: {
+      user: testAccount.user, // generated ethereal user
+      pass: testAccount.pass, // generated ethereal password
+    },
   });
 
   const mailOptions = {
     from: email.user,
-    to: "thedarkmayck115@gmail.com",
+    to: "marcosiegman01@gmail.com",
     subject,
     text,
   };
@@ -24,6 +33,7 @@ const sendEmail = (subject: string, text: string) => {
       if (error) {
         reject(error);
       } else {
+        console.log(info);
         resolve(true);
       }
     })
@@ -56,7 +66,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     } catch (error) {
       console.log(error);
       res.status(500).json({
-        message: 400,
+        message: error,
       });
     }
   } else {
