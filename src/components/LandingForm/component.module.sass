@@ -6,8 +6,7 @@
     align-items: flex-start
 
     justify-content: space-between
-    margin: 5rem var(--padding-x) 0 
-    height: 100vh
+    margin: 5rem var(--padding-x) 
     box-sizing: border-box
     form
         width: 100%
@@ -19,7 +18,14 @@
 
 .title
     composes: Title from "../../styles/texts.sass"
-    
+
+.statusContainer
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: flex-start
+    flex: 1
+    margin-top: 2rem
 
 @media screen and ( min-width:  vars.$tablet-breakpoint)
     .container

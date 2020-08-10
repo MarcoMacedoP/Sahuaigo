@@ -86,12 +86,16 @@ export const LandingForm: React.FC<LandingFormProps> = ({
         Realiza una reservación con nosotros.
       </h4>
       {status.state === "loading" ? (
-        <Loader />
+        <div className={styles.statusContainer}>
+          <Loader />
+        </div>
       ) : status.state === "success" ? (
-        <Success
-          title="Gracias por reservar con nosotros."
-          message="Enseguida nos pondremos en contacto para confirmar tu reservación."
-        />
+        <div className={styles.statusContainer}>
+          <Success
+            title="Gracias por reservar con nosotros."
+            message="Enseguida nos pondremos en contacto para confirmar tu reservación."
+          />
+        </div>
       ) : (
         <Formik
           initialValues={initialValues}

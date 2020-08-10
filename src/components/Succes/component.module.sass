@@ -1,12 +1,13 @@
+@use "../../styles/variables" as vars
+
 .container
     background: #4BB543
     display: flex
     justify-content: center
     align-items: center
-    padding: 5% 5% 5% 3%
+    padding: 5% 5% 5% 10%
     max-width: 100%
     box-sizing: border-box
-    margin-left: 64px
     border-radius: 32px
     animation-name: init
     animation-duration: 500ms
@@ -32,4 +33,7 @@
     100%
         border-radius: 32px
         transform: scale(1)
-        
+     
+@media screen and ( min-width: vars.$tablet-breakpoint )
+    .container
+        margin-left: 64px
