@@ -42,7 +42,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       );
       const emialHasSended = await sendEmail(
         "Mensaje de contacto desde www.Sahuaygo.com.mx",
-        `   Alguien se ha puesto en contacto desde la página web para realizar una reservación.
+        `   Alguien se ha puesto en contacto desde la página web para realizar una reservación. :)
           
             Nombre: ${params.name}
             Email: ${params.email}
