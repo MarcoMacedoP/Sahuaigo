@@ -16,7 +16,7 @@ const sendEmail = async (subject: string, text: string) => {
 
   const mailOptions = {
     from: process.env.EMAIL_ADDRESS,
-    to: "marcosiegman01@gmail.com",
+    to: "sahuaygoreserva@gmail.com",
     subject,
     text,
   };
