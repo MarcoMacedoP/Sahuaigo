@@ -2,27 +2,20 @@ import { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
 import hotels from "../../db/Hotels.json";
 
-const email = {
-  user: "marcosiegman01@gmail.com",
-  pass: "galleta001",
-};
-
 const sendEmail = async (subject: string, text: string) => {
-  let testAccount = await nodemailer.createTestAccount();
-
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
-    host: "smtp.ethereal.email",
-    port: 587,
-    secure: false, // true for 465, false for other ports
+    host: "smtp.zoho.com",
+    port: 465,
+    secure: true, // true for 465, false for other ports
     auth: {
-      user: testAccount.user, // generated ethereal user
-      pass: testAccount.pass, // generated ethereal password
+      user: process.env.EMAIL_ADDRESS,
+      pass: process.env.EMAIL_PASSWORD,
     },
   });
 
   const mailOptions = {
-    from: email.user,
+    from: process.env.EMAIL_ADDRESS,
     to: "marcosiegman01@gmail.com",
     subject,
     text,
