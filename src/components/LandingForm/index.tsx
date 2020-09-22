@@ -10,25 +10,26 @@ import * as yup from "yup";
 
 yup.setLocale({
   mixed: {
-    required: "El campo es requerido",
+    required: "El campo es requerido"
   },
   string: {
-    email: "Email invalido",
-  },
+    email: "Email invalido"
+  }
 });
 
-const validationSchema: yup.ObjectSchema<EmailData> = yup
-  .object()
-  .shape({
-    email: yup.string().email().required(),
-    message: yup.string().notRequired(),
-    name: yup.string().required(),
-    phone: yup
-      .string()
-      .matches(/[1-9]{8,}/, "Número invalido")
-      .required(),
-    selectedHotelId: yup.string().required(),
-  });
+const validationSchema: yup.ObjectSchema<EmailData> = yup.object().shape({
+  email: yup
+    .string()
+    .email()
+    .required(),
+  message: yup.string().notRequired(),
+  name: yup.string().required(),
+  phone: yup
+    .string()
+    .matches(/[0-9+ ]{8,20}/, "Número invalido")
+    .required(),
+  selectedHotelId: yup.string().required()
+});
 
 type LandingFormProps = {
   hotels: Hotel[];
@@ -42,11 +43,11 @@ type Status = {
 
 export const LandingForm: React.FC<LandingFormProps> = ({
   hotels,
-  selectedHotelId,
+  selectedHotelId
 }) => {
   const [status, setStatus] = useState<Status>({
     state: "unset",
-    error: null,
+    error: null
   });
 
   const initialValues: EmailData = {
@@ -54,37 +55,35 @@ export const LandingForm: React.FC<LandingFormProps> = ({
     name: "",
     message: "",
     phone: "",
-    selectedHotelId,
+    selectedHotelId
   };
 
   async function onSubmit(values: EmailData) {
     setStatus({
       state: "loading",
-      error: null,
+      error: null
     });
     try {
       const data = await fetch("/api/email", {
         method: "post",
-        body: JSON.stringify(values),
-      }).then((response) => response.json());
+        body: JSON.stringify(values)
+      }).then(response => response.json());
       console.log(data);
       setStatus({
         state: "success",
-        error: null,
+        error: null
       });
     } catch (error) {
       console.log({ error });
       setStatus({
         state: "error",
-        error,
+        error
       });
     }
   }
   return (
     <section className={styles.container} id="form">
-      <h4 className={styles.title}>
-        Realiza una reservación con nosotros.
-      </h4>
+      <h4 className={styles.title}>Realiza una reservación con nosotros.</h4>
       {status.state === "loading" ? (
         <div className={styles.statusContainer}>
           <Loader />
@@ -102,12 +101,7 @@ export const LandingForm: React.FC<LandingFormProps> = ({
           onSubmit={onSubmit}
           validationSchema={validationSchema}
         >
-          {({
-            handleSubmit,
-            values,
-            handleChange,
-            setFieldValue,
-          }) => {
+          {({ handleSubmit, values, handleChange, setFieldValue }) => {
             useEffect(() => {
               setFieldValue("selectedHotelId", selectedHotelId);
             }, [selectedHotelId]);
@@ -133,10 +127,7 @@ export const LandingForm: React.FC<LandingFormProps> = ({
                   placeholder="1234567890"
                 />
                 <div className={inputStyles.container}>
-                  <label
-                    className={inputStyles.label}
-                    htmlFor="hotel"
-                  >
+                  <label className={inputStyles.label} htmlFor="hotel">
                     Hotel
                   </label>
                   <select
@@ -145,21 +136,15 @@ export const LandingForm: React.FC<LandingFormProps> = ({
                     onChange={handleChange}
                     value={values.selectedHotelId}
                   >
-                    {hotels.map((hotel) => (
-                      <option
-                        value={hotel.id}
-                        className={styles.selectOption}
-                      >
+                    {hotels.map(hotel => (
+                      <option value={hotel.id} className={styles.selectOption}>
                         {hotel.name.toUpperCase()}
                       </option>
                     ))}
                   </select>
                 </div>
                 <div className={inputStyles.container}>
-                  <label
-                    className={inputStyles.label}
-                    htmlFor="message"
-                  >
+                  <label className={inputStyles.label} htmlFor="message">
                     Mensaje
                   </label>
                   <textarea
